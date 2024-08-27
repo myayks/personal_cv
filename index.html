@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksims Mironovs - CV</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffff;
+            color: #333;
+            line-height: 1.4;
+            border-color: #ffff;
+        }
+        .container {
+            width: 21cm; /* A4 Width */
+            min-height: 29.7cm; /* A4 Height */
+            margin: auto;
+            padding: 20px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        h2 {
+            font-size: 22px;
+            margin: 0;
+            font-weight: normal;
+            color: #34495e;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            background: #2c3e50;
+        }
+        .contact-info {
+            font-size: 14px;
+            text-align: center;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 50%;
+            padding: 10px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            color: #2c3e50;
+            font-size: 20px;
+        }
+        .section h4 {
+            font-size: 16px;
+            color: #555;
+        }
+        h3, h4 {
+            margin: 10px 0;
+        }
+        .experience ul, .education ul, .skills ul, .languages ul, .hobbies ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .experience li, .education li, .skills li, .languages li, .hobbies li {
+            margin-bottom: 10px;
+        }
+        .multi-column {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile-picture"></div> <!-- Placeholder for Profile Picture -->
+            <h1 id="name"></h1>
+            <h2 id="title"></h2>
+        </div>
+        <div class="contact-info">
+            <p id="location"></p>
+            <p>Email: <a id="email" href="#"></a></p>
+            <p>Phone: <span id="phone"></span></p>
+            <p>LinkedIn: <a id="linkedin" href="#"></a></p>
+        </div>
+
+        <div class="section professional-summary">
+            <h3>Professional Summary</h3>
+            <p id="professional-summary"></p>
+        </div>
+
+        <div class="multi-column">
+            <div class="column">
+                <div class="section experience">
+                    <h3>Work Experience</h3>
+                    <div id="work-experience"></div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="section education">
+                    <h3>Education</h3>
+                    <div id="education"></div>
+                </div>
+                <div class="section skills">
+                    <h3>Technical Skills</h3>
+                    <ul id="technical-skills"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="multi-column">
+            <div class="column">
+                <div class="section languages">
+                    <h3>Languages</h3>
+                    <ul id="languages"></ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="section hobbies">
+                    <h3>Hobbies</h3>
+                    <ul id="hobbies"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        fetch('cv-data.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('name').innerText = data.name;
+                document.getElementById('title').innerText = data.title;
+                document.getElementById('location').innerText = data.location;
+                document.getElementById('email').innerText = data.email;
+                document.getElementById('email').href = 'mailto:' + data.email;
+                document.getElementById('phone').innerText = data.phone;
+                document.getElementById('linkedin').innerText = data.linkedin;
+                document.getElementById('linkedin').href = data.linkedin;
+                document.getElementById('professional-summary').innerText = data.professional_summary;
+                
+                const workExperienceDiv = document.getElementById('work-experience');
+                data.work_experience.forEach(job => {
+                    const jobDiv = document.createElement('div');
+                    jobDiv.innerHTML = `<h4>${job.company}</h4><p>${job.position} - ${job.duration}, ${job.location}</p><ul>${job.responsibilities.map(res => `<li>${res}</li>`).join('')}</ul><h4>Key Achievements:</h4><ul>${job.achievements.map(ach => `<li>${ach}</li>`).join('')}</ul>`;
+                    workExperienceDiv.appendChild(jobDiv);
+                });
+
+                const educationDiv = document.getElementById('education');
+                data.education.forEach(edu => {
+                    const eduDiv = document.createElement('div');
+                    eduDiv.innerHTML = `<h4>${edu.institution}</h4><p>${edu.degree} - ${edu.years}</p>`;
+                    educationDiv.appendChild(eduDiv);
+                });
+
+                const techSkillsUl = document.getElementById('technical-skills');
+                data.technical_skills.forEach(skill => {
+                    const li = document.createElement('li');
+                    li.innerText = skill;
+                    techSkillsUl.appendChild(li);
+                });
+
+                const languagesUl = document.getElementById('languages');
+                data.languages.forEach(lang => {
+                    const li = document.createElement('li');
+                    li.innerText = lang;
+                    languagesUl.appendChild(li);
+                });
+
+                const hobbiesUl = document.getElementById('hobbies');
+                data.hobbies.forEach(hobby => {
+                    const li = document.createElement('li');
+                    li.innerText = hobby;
+                    hobbiesUl.appendChild(li);
+                });
+            })
+            .catch(error => console.error('Error loading the CV data:', error));
+    </script>
+</body>
+</html>
