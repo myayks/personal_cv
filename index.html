@@ -44,16 +44,15 @@
         .section {
             font-size: 14px;
         }
+        .section-content {
+            margin: 0px 10px;
+        }
         .section h3 {
             color: #2c3e50;
             font-size: 18px;
             display: flex; 
             flex-direction: row;
             padding-left: 10px; 
-        }
-        .section h4 {
-            font-size: 16px;
-            color: #555;
         }
         h3:before {
             font-family: "Font Awesome 5 Free";
@@ -106,6 +105,32 @@
         h1, h2, h3 {
             text-transform: uppercase;
         }
+        h4 {
+            font-size: 14px;
+            font-weight: normal;
+        }
+        h4:before {
+            font-family: "Font Awesome 5 Free";
+            display: inline-block;
+            padding-right: 6px;
+            vertical-align: middle;
+            font-weight: 900;
+        }
+        .location::before {
+            content: "\f3c5";
+        }
+        .phone::before {
+            content: "\f095";
+        }
+        .email::before {
+            content: "\f0e0";
+        }
+        .linkedin::before {
+            content: "\f08c";
+        }
+        .languages::before {
+            content: "\f0ac";
+        }
         .multi-column {
             display: flex;
             flex-wrap: wrap;
@@ -127,11 +152,13 @@
 
                 <div class="section">
                     <h3 class="line-after contact-info">Contact me</h3>
-                    <div>Riga, Latvia</div>
-                    <div>+37125328891</div>
-                    <div>maksims.mironovs@gmail.com</div>
-                    <div>/in/maksims-mironovs</div>
-                    <div>Fluent English, Latvian, Russian and elementary German</div>
+                    <div class="section-content">
+                        <h4 class="location">Riga, Latvia</h4>
+                        <h4 class="phone">+37125328891</h4>
+                        <h4 class="email">maksims.mironovs@gmail.com</h4>
+                        <h4 class="linkedin">/in/maksims-mironovs</h4>
+                        <h4 class="languages">Fluent English, Latvian, Russian and elementary German</h4>
+                    </div>
                 </div>
 
                 <div class="section">
