@@ -32,33 +32,53 @@
             flex-direction: column;
             justify-content: space-between;
             width: 40%;
-            padding: 10px;
-            background: rgb(234, 253, 222);
+            background: #59D3FF;
         }
         .column-wide {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             width: 60%;
-            padding: 10px;
-            background: rgb(186, 233, 247);
         }
         .section {
-            margin-bottom: 5px;
             font-size: 14px;
-
         }
         .section h3 {
-            /* padding-bottom: 5px; */
             color: #2c3e50;
-            font-size: 20px;
+            font-size: 18px;
+            display: flex; 
+            flex-direction: row; 
         }
+        h3:after { 
+            content: ""; 
+            flex: 1 1; 
+            border-bottom: 2px solid #000; 
+            margin: auto;
+            margin-left: 15px;
+        } 
         .section h4 {
             font-size: 16px;
             color: #555;
         }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin: 0px;
+            padding: 20px 0px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            background-color: coral;
+            margin: 0px;
+            padding: 10px 0px;
+        }
+
         h3, h4 {
             margin: 10px 0;
+        }
+        h1, h2, h3 {
+            text-transform: uppercase;
         }
         .multi-column {
             display: flex;
@@ -71,16 +91,16 @@
     <div class="container multi-column">
         <div class="multi-column">
             <div class="column-narrow">
-                <div class="section name">
+                <div class="name">
                     <h1>Maksims Mironovs</h1>
                 </div>
 
-                <div class="section title">
+                <div class="title">
                     <h2>Software Engineer</h2>
                 </div>
 
                 <div class="section contact-info">
-                    <h3>Contact info</h3>
+                    <h3 class="line-after">Contact me</h3>
                     <div>Riga, Latvia</div>
                     <div>+37125328891</div>
                     <div>maksims.mironovs@gmail.com</div>
