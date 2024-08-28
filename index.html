@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maksims Mironovs - CV</title>
+    <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.7.2/css/all.css">
     <style>
         * {
             box-sizing: border-box;
@@ -47,7 +48,19 @@
             color: #2c3e50;
             font-size: 18px;
             display: flex; 
-            flex-direction: row; 
+            flex-direction: row;
+            padding-left: 10px; 
+        }
+        .section h4 {
+            font-size: 16px;
+            color: #555;
+        }
+        h3:before {
+            font-family: "Font Awesome 5 Free";
+            display: inline-block;
+            padding-right: 10px;
+            vertical-align: middle;
+            font-weight: 900;
         }
         h3:after { 
             content: ""; 
@@ -55,10 +68,24 @@
             border-bottom: 2px solid #000; 
             margin: auto;
             margin-left: 15px;
-        } 
-        .section h4 {
-            font-size: 16px;
-            color: #555;
+        }
+        .contact-info::before {
+            content: "\f2b9";
+        }
+        .professional-summary::before {
+            content: "\f508";
+        }
+        .education::before {
+            content: "\f501";
+        }
+        .hobbies::before {
+            content: "\f1d8";
+        }
+        .skills::before {
+            content: "\f085";
+        }
+        .professional-experience::before {
+            content: "\f5fc";
         }
         h1 {
             text-align: center;
@@ -73,7 +100,6 @@
             margin: 0px;
             padding: 10px 0px;
         }
-
         h3, h4 {
             margin: 10px 0;
         }
@@ -99,8 +125,8 @@
                     <h2>Software Engineer</h2>
                 </div>
 
-                <div class="section contact-info">
-                    <h3 class="line-after">Contact me</h3>
+                <div class="section">
+                    <h3 class="line-after contact-info">Contact me</h3>
                     <div>Riga, Latvia</div>
                     <div>+37125328891</div>
                     <div>maksims.mironovs@gmail.com</div>
@@ -108,8 +134,8 @@
                     <div>Fluent English, Latvian, Russian and elementary German</div>
                 </div>
 
-                <div class="section professional-summary">
-                    <h3>Profile</h3>
+                <div class="section">
+                    <h3 class="professional-summary">Profile</h3>
                     <div>I am an experienced C++ developer with a strong focus on audio plugin development using the JUCE framework. My expertise includes designing and maintaining advanced sound processing algorithms, building user-friendly interfaces, and collaborating with sound engineers to refine audio products. I am seeking a new position where I can leverage my skills in a dynamic and creative environment.</div>
                     <div>icon list</div>
                     <div>icon list</div>
@@ -122,8 +148,8 @@
                     <div>soft skills list</div>
                 </div>
 
-                <div class="section education">
-                    <h3>Education</h3>
+                <div class="section">
+                    <h3 class="education">Education</h3>
                     <div>PHD STUDENT IN PSYCHOACOUSTICS</div>
                     <div>University of Huddersfield, UK</div>
                     <div>2016 - 2019</div>
@@ -132,8 +158,8 @@
                     <div>2012 - 2016</div>
                 </div>
 
-                <div class="section hobbies">
-                    <h3>Hobbies</h3>
+                <div class="section">
+                    <h3 class="hobbies">Hobbies</h3>
                     <div>icon list</div>
                     <div>icon list</div>
                     <div>hobbies</div>
@@ -141,12 +167,12 @@
             </div>
             
             <div class="column-wide">
-                <div class="section skills">
-                    <h3>Expertise</h3>
+                <div class="section">
+                    <h3 class="skills">Expertise</h3>
                     <div>technical skills list</div>
                 </div>
-                <div class="section professional-experience">
-                    <h3>Professional experience</h3>
+                <div class="section">
+                    <h3 class="professional-experience">Professional experience</h3>
                     <div>work experience</div>
                 </div>
             </div>
