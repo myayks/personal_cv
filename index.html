@@ -113,6 +113,24 @@
             margin: 10px 0px;
             padding-left: 8px;
         }
+        p {
+            text-align: justify;
+        }
+        .skill-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .soft-skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            padding: 10px;
+        }
+        .soft-skill-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
         .multi-column {
             display: flex;
             flex-wrap: wrap;
@@ -135,26 +153,51 @@
                 <div class="section">
                     <h3 class="line-after contact-info">Contact me</h3>
                     <ul class="section-content info-list fa-ul">
-                        <li><i class="fa-li fa-solid fa-location-dot"></i>Riga, Latvia</li>
-                        <li><i class="fa-li fa-solid fa-phone"></i>+37125328891</li>
-                        <li><i class="fa-li fa-solid fa-envelope"></i>maksims.mironovs@gmail.com</li>
+                        <li><i class="fa-li fas fa-location-dot"></i>Riga, Latvia</li>
+                        <li><i class="fa-li fas fa-phone"></i>+371 25328891</li>
+                        <li><i class="fa-li fas fa-envelope"></i>maksims.mironovs@gmail.com</li>
                         <li><i class="fa-li fa-brands fa-linkedin"></i>/in/maksims-mironovs</li>
-                        <li><i class="fa-li fa-solid fa-globe"></i>Fluent English, Latvian, Russian and elementary German</li>
+                        <li><i class="fa-li fas fa-globe"></i>Fluent English, Latvian, Russian and elementary German</li>
                     </ul>
                 </div>
 
                 <div class="section">
                     <h3 class="professional-summary">Profile</h3>
-                    <div>I am an experienced C++ developer with a strong focus on audio plugin development using the JUCE framework. My expertise includes designing and maintaining advanced sound processing algorithms, building user-friendly interfaces, and collaborating with sound engineers to refine audio products. I am seeking a new position where I can leverage my skills in a dynamic and creative environment.</div>
-                    <div>icon list</div>
-                    <div>icon list</div>
-                    <div>soft skills list</div>
-                    <div>icon list</div>
-                    <div>icon list</div>
-                    <div>soft skills list</div>
-                    <div>icon list</div>
-                    <div>icon list</div>
-                    <div>soft skills list</div>
+                    <div class="section-content">
+                        <p>I am an experienced C++ developer with a strong focus on audio plugin development using the 
+                            JUCE framework. My expertise includes designing and maintaining advanced sound processing 
+                            algorithms, building user-friendly interfaces, and collaborating with sound engineers to 
+                            refine audio products. I am seeking a new position where I can leverage my skills in a 
+                            dynamic and creative environment.</p>
+                    </div>
+                    <div class="section-content">
+                        <div class="skill-container">
+                            <div class="soft-skill">
+                                <i class="soft-skill-icon fas fa-lightbulb"></i>
+                                <div>Problem solving</div>
+                            </div>
+                            <div class="soft-skill">
+                                <i class="soft-skill-icon fas fa-chart-simple"></i>
+                                <div>Analytical thinking</div>
+                            </div>
+                            <div class="soft-skill">
+                                <i class="soft-skill-icon fas fa-hand"></i>
+                                <div>Initiative</div>
+                            </div>
+                            <div class="soft-skill">
+                                <i class="soft-skill-icon fas fa-bolt"></i>
+                                <div>Fast learner</div>
+                            </div>
+                            <div class="soft-skill">
+                                <i class="soft-skill-icon fas fa-comments"></i>
+                                <div>Communication</div>
+                            </div>
+                            <div class="soft-skill">
+                                <i class="soft-skill-icon fas fa-people-group"></i>
+                                <div>Teamwork</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="section">
