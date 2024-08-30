@@ -131,6 +131,37 @@
             font-size: 24px;
             margin-bottom: 10px;
         }
+        .edu-list {
+            margin: 0px 0px;
+            padding: 0px 30px;
+        }
+        .edu-list li {
+            position: relative;
+            padding: 5px 5px;
+        }
+        .edu-list .fa-li {
+            font-size: 12px;
+        }
+        .edu-list li:before {
+            content:"";
+            position: absolute;
+            left: -13px;
+            /* border-left: 1px solid black; */
+            background-color: black;
+            height: 100%;
+            width: 3px;
+        }
+        .edu-list li:last-child:before {
+            height: 80%;
+        }
+        .edu-title {
+            text-transform: uppercase;
+            /* font-weight: 500; */
+            margin-top: 3px;
+        }
+        .edu-location {
+            font-style: italic;
+        }
         .hobby-container {
             display: flex;
             flex-wrap: nowrap;
@@ -143,7 +174,7 @@
             padding: 10px;
         }
         .hobby-icon {
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 10px;
         }
         .multi-column {
@@ -171,7 +202,7 @@
                         <li><i class="fa-li fas fa-location-dot"></i>Riga, Latvia</li>
                         <li><i class="fa-li fas fa-phone"></i>+371 25328891</li>
                         <li><i class="fa-li fas fa-envelope"></i>maksims.mironovs@gmail.com</li>
-                        <li><i class="fa-li fa-brands fa-linkedin"></i>/in/maksims-mironovs</li>
+                        <li><i class="fa-li fab fa-linkedin"></i>/in/maksims-mironovs</li>
                         <li><i class="fa-li fas fa-globe"></i>Fluent English, Latvian, Russian and elementary German</li>
                     </ul>
                 </div>
@@ -216,14 +247,34 @@
                 </div>
 
                 <div class="section">
-                    <h3 class="education">Education</h3>
-                    <div>PHD STUDENT IN PSYCHOACOUSTICS</div>
-                    <div>University of Huddersfield, UK</div>
-                    <div>2016 - 2019</div>
-                    <div>BSC(HONS) IN MUSIC TECHNOLOGY AND</div>
-                    <div>AUDIO SYSTEMS</div>
-                    <div>2012 - 2016</div>
+                    <div class="section-content">
+                        <h3 class="education">Education</h3>
+                        <ul class="edu-list fa-ul">
+                            <li class="edu-item"><i class="fa-li fas fa-circle"></i>
+                                <div class="edu-date">2016 - 2019 (Incomplete)</div>
+                                <div class="edu-title">PhD in Psychoacoustics</div>
+                                <div class="edu-location">University of Huddersfield, UK</div>
+                            </li>
+                            <li class="edu-item"><i class="fa-li fas fa-circle"></i>
+                                <div class="edu-date">2012 - 2016</div>
+                                <div class="edu-title">BSc(Hons) in Music Technology and Audio Systems</div>
+                                <div class="edu-location">University of Huddersfield, UK</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- <div class="section">
+                    <div class="section-content">
+                        <h3 class="education">Education</h3>
+                        <div class="edu-title">PhD in Psychoacoustics</div>
+                        <div class="edu-location">University of Huddersfield, UK</div>
+                        <div class="edu-date">2016 - 2019 (Incomplete)</div>
+                        <div class="edu-title">BSc(Hons) in Music Technology and Audio Systems</div>
+                        <div class="edu-location">University of Huddersfield, UK</div>
+                        <div class="edu-date">2012 - 2016</div>
+                    </div>
+                </div> -->
 
                 <div class="section">
                     <h3 class="hobbies">Hobbies</h3>
