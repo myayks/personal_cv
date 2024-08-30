@@ -144,7 +144,7 @@
         }
         .edu-list {
             margin: 0px 0px;
-            padding: 0px 30px;
+            padding: 0px 20px;
         }
         .edu-list li {
             position: relative;
@@ -168,8 +168,31 @@
             text-transform: uppercase;
             margin-top: 3px;
         }
-        .edu-location {
-            font-style: italic;
+        .prof-list {
+            margin: 0px 0px;
+            padding: 0px 20px;
+        }
+        .prof-list .prof-item {
+            position: relative;
+            padding: 5px 5px;
+        }
+        .prof-list .fa-li {
+            font-size: 12px;
+        }
+        .prof-list .prof-item:before {
+            content:"";
+            position: absolute;
+            left: -13px;
+            background-color: black;
+            height: 100%;
+            width: 3px;
+        }
+        .prof-list .prof-item:last-child:before {
+            height: 80%;
+        }
+        .prof-title {
+            text-transform: uppercase;
+            margin-top: 3px;
         }
         .hobby-container {
             display: flex;
@@ -256,8 +279,8 @@
                 </div>
 
                 <div class="section">
+                    <h3 class="education">Education</h3>
                     <div class="section-content">
-                        <h3 class="education">Education</h3>
                         <ul class="edu-list fa-ul">
                             <li class="edu-item"><i class="fa-li fas fa-circle"></i>
                                 <div class="edu-date">2016 - 2019 (Incomplete)</div>
@@ -345,7 +368,76 @@
                 </div>
                 <div class="section">
                     <h3 class="professional-experience">Professional experience</h3>
-                    <div>work experience</div>
+                    <div class="section-content">
+                        <ul class="prof-list fa-ul">
+                            <li class="prof-item"><i class="fa-li fas fa-circle"></i>
+                                <div class="prof-date">02.2023 - current</div>
+                                <div class="prof-title">Software Engineer | Sonarworks, LV</div>
+                                <p>Develop audio plugins using the JUCE framework. Focus on intuitive user interfaces and advanced sound processing algorithms. Collaborate with sound engineers to define and enhance product features.</p>
+                                <ul>
+                                    <li>
+                                        <p>Implemented the Virtual Monitoring feature ahead of schedule.</p>
+                                    </li>
+                                    <li>
+                                        <p>Defined a comprehensive technical project specification for a major client.</p>
+                                    </li>
+                                    <li>
+                                        <p>Delivered a complex new AI product under tight deadlines.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="prof-item"><i class="fa-li fas fa-circle"></i>
+                                <div class="prof-date">07.2020 - 02.2023</div>
+                                <div class="prof-title">Data Engineer | Sonarworks, LV</div>
+                                <p>Designed and developed reports to support decision-making. Managed the data warehouse and improved data infrastructure.</p>
+                                <ul>
+                                    <li>
+                                        <p>Transitioned manual ETL scripts to an automated system.</p>
+                                    </li>
+                                    <li>
+                                        <p>Oversaw the management of the team's infrastructure.</p>
+                                    </li>
+                                    <li>
+                                        <p>Assumed team lead responsibilities.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="prof-item"><i class="fa-li fas fa-circle"></i>
+                                <div class="prof-date">09.2015 - 12.2019</div>
+                                <div class="prof-title">Research Assistant | Applied Psychoacoustics Lab, UK</div>
+                                <p>Contributed to psychoacoustic research and developed algorithms. Created a mobile app and VST plugins for 3D audio production.</p>
+                                <ul>
+                                    <li>
+                                        <p>Presented research findings at international conferences.</p>
+                                    </li>
+                                    <li>
+                                        <p>Launched a research-driven audio plugins and mobile app.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="prof-item"><i class="fa-li fas fa-circle"></i>
+                                <div class="prof-date">01.2018 - 07.2018</div>
+                                <div class="prof-title">Teaching Assistant | University of Huddersfield, UK</div>
+                                <p>Facilitated programming courses in music technology.</p>
+                                <ul>
+                                    <li>
+                                        <p>Provided individual support to students, contributing to high pass rates.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="prof-item"><i class="fa-li fas fa-circle"></i>
+                                <div class="prof-date">07.2014 - 07.2015</div>
+                                <div class="prof-title">Research Intern | Fraunhofer IIS, DE</div>
+                                <p>Collaborated on developing a multichannel reverb VST plugin..</p>
+                                <ul>
+                                    <li>
+                                        <p>Designed a user-friendly interface for the VST plugin.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
