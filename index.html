@@ -41,27 +41,24 @@
             justify-content: space-between;
             width: 60%;
         }
-        .section {
-            font-size: 14px;
-        }
         .section-content {
             margin: 0px 10px;
         }
-        .section h3 {
+        h2 {
             color: #2c3e50;
-            font-size: 18px;
+            font-size: 16px;
             display: flex; 
             flex-direction: row;
             padding-left: 10px; 
         }
-        h3:before {
+        h2:before {
             font-family: "Font Awesome 5 Free";
             display: inline-block;
             padding-right: 10px;
             vertical-align: middle;
             font-weight: 900;
         }
-        h3:after { 
+        h2:after { 
             content: ""; 
             flex: 1 1; 
             border-bottom: 2px solid #000; 
@@ -86,23 +83,35 @@
         .professional-experience::before {
             content: "\f5fc";
         }
-        h1 {
+        .name {
             text-align: center;
             font-size: 36px;
             margin: 0px;
             padding: 20px 0px;
         }
-        h2 {
+        h1 {
             text-align: center;
-            font-size: 24px;
+            font-size: 18px;
             background-color: coral;
             margin: 0px;
             padding: 10px 0px;
         }
-        h3, h4 {
+        h3 {
+            font-weight: normal;
+            font-size: 13px;
+            padding: 0px;
+            margin: 0px;
+        }
+        h4 {
+            font-weight: normal;
+            font-size: 13px;
+            padding: 0px;
+            margin: 0px;
+        }
+        h1, h2 {
             margin: 10px 0;
         }
-        h1, h2, h3 {
+        h1, h2, h3, .name {
             text-transform: uppercase;
         }
         .info-list {
@@ -115,6 +124,9 @@
         }
         p {
             text-align: justify;
+            font-size: 12px;
+            padding: 0px;
+            margin: 0px;
         }
         .skill-container {
             display: flex;
@@ -214,6 +226,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
+
     </style>
 </head>
 <body>
@@ -221,26 +234,26 @@
         <div class="multi-column">
             <div class="column-narrow">
                 <div class="name">
-                    <h1>Maksims Mironovs</h1>
+                    Maksims Mironovs
                 </div>
 
                 <div class="title">
-                    <h2>Software Engineer</h2>
+                    <h1>Software Engineer</h1>
                 </div>
 
                 <div class="section">
-                    <h3 class="line-after contact-info">Contact me</h3>
+                    <h2 class="line-after contact-info">Contact me</h2>
                     <ul class="section-content info-list fa-ul">
-                        <li><i class="fa-li fas fa-location-dot"></i>Riga, Latvia</li>
-                        <li><i class="fa-li fas fa-phone"></i>+371 25328891</li>
-                        <li><i class="fa-li fas fa-envelope"></i>maksims.mironovs@gmail.com</li>
-                        <li><i class="fa-li fab fa-linkedin"></i>/in/maksims-mironovs</li>
-                        <li><i class="fa-li fas fa-globe"></i>Fluent English, Latvian, Russian and elementary German</li>
+                        <li><i class="fa-li fas fa-location-dot"></i><h4>Riga, Latvia</h4></li>
+                        <li><i class="fa-li fas fa-phone"></i><h4>+371 25328891</h4></li>
+                        <li><i class="fa-li fas fa-envelope"></i><h4>maksims.mironovs@gmail.com</h4></li>
+                        <li><i class="fa-li fab fa-linkedin"></i><h4>/in/maksims-mironovs</h4></li>
+                        <li><i class="fa-li fas fa-globe"></i><h4>Fluent English, Latvian, Russian</h4></li>
                     </ul>
                 </div>
 
                 <div class="section">
-                    <h3 class="professional-summary">Profile</h3>
+                    <h2 class="professional-summary">Profile</h2>
                     <div class="section-content">
                         <p>I am an experienced C++ developer with a strong focus on audio plugin development using the 
                             JUCE framework. My expertise includes designing and maintaining advanced sound processing 
@@ -252,69 +265,69 @@
                         <div class="skill-container">
                             <div class="soft-skill">
                                 <i class="soft-skill-icon fas fa-lightbulb"></i>
-                                <div>Problem solver</div>
+                                <h4>Problem solver</h4>
                             </div>
                             <div class="soft-skill">
                                 <i class="soft-skill-icon fas fa-chart-simple"></i>
-                                <div>Analytical thinker</div>
+                                <h4>Analytical thinker</h4>
                             </div>
                             <div class="soft-skill">
                                 <i class="soft-skill-icon fas fa-hand"></i>
-                                <div>Initiative taker</div>
+                                <h4>Initiative taker</h4>
                             </div>
                             <div class="soft-skill">
                                 <i class="soft-skill-icon fas fa-bolt"></i>
-                                <div>Quick learner</div>
+                                <h4>Quick learner</h4>
                             </div>
                             <div class="soft-skill">
                                 <i class="soft-skill-icon fas fa-comments"></i>
-                                <div>Clear communicator</div>
+                                <h4>Clear communicator</h4>
                             </div>
                             <div class="soft-skill">
                                 <i class="soft-skill-icon fas fa-people-group"></i>
-                                <div>Team player</div>
+                                <h4>Team player</h4>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="section">
-                    <h3 class="education">Education</h3>
+                    <h2 class="education">Education</h2>
                     <div class="section-content">
                         <ul class="edu-list fa-ul">
                             <li class="edu-item"><i class="fa-li fas fa-circle"></i>
-                                <div class="edu-date">2016 - 2019 (Incomplete)</div>
-                                <div class="edu-title">PhD in Psychoacoustics</div>
-                                <div class="edu-location">University of Huddersfield, UK</div>
+                                <h4>2016 - 2019 (Incomplete)</h4>
+                                <h3 class="edu-title">PhD in Psychoacoustics</h3>
+                                <h4>University of Huddersfield, UK</h4>
                             </li>
                             <li class="edu-item"><i class="fa-li fas fa-circle"></i>
-                                <div class="edu-date">2012 - 2016</div>
-                                <div class="edu-title">BSc(Hons) in Music Technology and Audio Systems</div>
-                                <div class="edu-location">University of Huddersfield, UK</div>
+                                <h4>2012 - 2016</h4>
+                                <h3 class="edu-title">BSc(Hons) in Music Technology and Audio Systems</h3>
+                                <h4>University of Huddersfield, UK</h4>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="section">
-                    <h3 class="hobbies">Hobbies</h3>
+                    <h2 class="hobbies">Hobbies</h2>
                     <div class="section-content">
                         <div class="hobby-container">
                             <div class="hobby">
                                 <i class="hobby-icon fas fa-screwdriver-wrench"></i>
-                                <div>DIY</div>
+                                <h4>DIY</h4>
                             </div>
                             <div class="hobby">
                                 <i class="hobby-icon fas fa-microchip"></i>
-                                <div>Electronics</div>
+                                <h4>Electronics</h4>
                             </div>
                             <div class="hobby">
                                 <i class="hobby-icon fas fa-volume-high"></i>
-                                <div>Music</div>
+                                <h4>Music</h4>
                             </div>
                             <div class="hobby">
                                 <i class="hobby-icon fas fa-camera-retro"></i>
-                                <div>Photography</div>
+                                <h4>Photography</h4>
                             </div>
                         </div>
                     </div>
@@ -323,56 +336,56 @@
             
             <div class="column-wide">
                 <div class="section">
-                    <h3 class="skills">Expertise</h3>
+                    <h2 class="skills">Expertise</h2>
                     <div class="section-content">
                         <div class="skill-container">
                             <div class="tech-skill">
                                 <i class="tech-skill-icon fas fa-skull"></i>
-                                <div>C++</div>
+                                <h4>C++</h4>
                             </div>
                             <div class="tech-skill">
                                 <i class="tech-skill-icon fas fa-skull"></i>
-                                <div>JUCE</div>
+                                <h4>JUCE</h4>
                             </div>
                             <div class="tech-skill">
                                 <i class="tech-skill-icon fas fa-skull"></i>
-                                <div>DSP</div>
+                                <h4>DSP</h4>
                             </div>
                             <div class="tech-skill">
                                 <i class="tech-skill-icon fas fa-skull"></i>
-                                <div>CMake</div>
+                                <h4>CMake</h4>
                             </div>
                             <div class="tech-skill">
                                 <i class="tech-skill-icon fas fa-skull"></i>
-                                <div>Gitlab</div>
+                                <h4>Gitlab</h4>
                             </div>
                             <div class="tech-skill">
                                 <i class="tech-skill-icon fas fa-skull"></i>
-                                <div>CI/CD</div>
+                                <h4>CI/CD</h4>
                             </div>
                             <div class="tech-skill">
                                 <i class="tech-skill-icon fas fa-skull"></i>
-                                <div>Python</div>
+                                <h4>Python</h4>
                             </div>
                             
                             <div class="tech-skill">
                                 <i class="tech-skill-icon fas fa-skull"></i>
-                                <div>SQL</div>
+                                <h4>SQL</h4>
                             </div>
                             <div class="tech-skill">
                                 <i class="tech-skill-icon fas fa-skull"></i>
-                                <div>Spatial audio</div>
+                                <h4>Spatial audio</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="section">
-                    <h3 class="professional-experience">Professional experience</h3>
+                    <h2 class="professional-experience">Professional experience</h2>
                     <div class="section-content">
                         <ul class="prof-list fa-ul">
                             <li class="prof-item"><i class="fa-li fas fa-circle"></i>
-                                <div class="prof-date">02.2023 - current</div>
-                                <div class="prof-title">Software Engineer | Sonarworks, LV</div>
+                                <h4>02.2023 - current</h4>
+                                <h3 class="prof-title">Software Engineer | Sonarworks, LV</h3>
                                 <p>At Sonarworks, I develop audio plugins using the JUCE framework, focusing on intuitive user interfaces and advanced sound processing algorithms. My role involves collaborating with sound engineers to define new features and enhance existing products.</p>
                                 <ul>
                                     <li>
@@ -387,8 +400,8 @@
                                 </ul>
                             </li>
                             <li class="prof-item"><i class="fa-li fas fa-circle"></i>
-                                <div class="prof-date">07.2020 - 02.2023</div>
-                                <div class="prof-title">Data Engineer | Sonarworks, LV</div>
+                                <h4>07.2020 - 02.2023</h4>
+                                <h3 class="prof-title">Data Engineer | Sonarworks, LV</h3>
                                 <p>I designed and developed reports, dashboards, and data structures to support decision-making processes based on tangible data. Additionally, I managed the data warehouse, oversaw data definitions, and improved data infrastructure.</p>
                                 <ul>
                                     <li>
@@ -403,8 +416,8 @@
                                 </ul>
                             </li>
                             <li class="prof-item"><i class="fa-li fas fa-circle"></i>
-                                <div class="prof-date">09.2015 - 12.2019</div>
-                                <div class="prof-title">Research Assistant | Applied Psychoacoustics Lab, UK</div>
+                                <h4>09.2015 - 12.2019</h4>
+                                <h3 class="prof-title">Research Assistant | Applied Psychoacoustics Lab, UK</h3>
                                 <p>I contributed to psychoacoustic research and developed perceptually motivated algorithms for audio applications. I also created a mobile app and VST plugins for 3D audio production, enhancing my software development skills.</p>
                                 <ul>
                                     <li>
@@ -416,8 +429,8 @@
                                 </ul>
                             </li>
                             <li class="prof-item"><i class="fa-li fas fa-circle"></i>
-                                <div class="prof-date">01.2018 - 07.2018</div>
-                                <div class="prof-title">Teaching Assistant | University of Huddersfield, UK</div>
+                                <h4>01.2018 - 07.2018</h4>
+                                <h3 class="prof-title">Teaching Assistant | University of Huddersfield, UK</h3>
                                 <p>I facilitated object-oriented programming courses in music technology, guiding students in building an audio sequencer with JUCE. My role included supervising seminars, mentoring students, and evaluating their performance.</p>
                                 <ul>
                                     <li>
@@ -427,8 +440,8 @@
                                 </ul>
                             </li>
                             <li class="prof-item"><i class="fa-li fas fa-circle"></i>
-                                <div class="prof-date">07.2014 - 07.2015</div>
-                                <div class="prof-title">Research Intern | Fraunhofer IIS, DE</div>
+                                <h4>07.2014 - 07.2015</h4>
+                                <h3 class="prof-title">Research Intern | Fraunhofer IIS, DE</h3>
                                 <p>I collaborated on developing a multichannel reverb VST plugin, focusing on UI design and porting an audio engine from MATLAB. I assisted in creating development roadmaps and overcoming project challenges, enhancing my programming skills.</p>
                                 <ul>
                                     <li>
