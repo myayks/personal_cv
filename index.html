@@ -41,7 +41,7 @@
             justify-content: space-between;
             width: 60%;
         }
-        .section-content {
+        .section {
             margin: 0px 10px;
         }
         h2 {
@@ -49,14 +49,11 @@
             font-size: 16px;
             display: flex; 
             flex-direction: row;
-            padding-left: 10px; 
+            align-items: center;
         }
-        h2:before {
-            font-family: "Font Awesome 5 Free";
-            display: inline-block;
-            padding-right: 10px;
-            vertical-align: middle;
-            font-weight: 900;
+        .section i {
+            margin: 0px 15px 0px 0px;
+            font-size: 24px;
         }
         h2:after { 
             content: ""; 
@@ -64,24 +61,6 @@
             border-bottom: 2px solid #000; 
             margin: auto;
             margin-left: 15px;
-        }
-        .contact-info::before {
-            content: "\f2b9";
-        }
-        .professional-summary::before {
-            content: "\f508";
-        }
-        .education::before {
-            content: "\f501";
-        }
-        .hobbies::before {
-            content: "\f1d8";
-        }
-        .skills::before {
-            content: "\f085";
-        }
-        .professional-experience::before {
-            content: "\f5fc";
         }
         .name {
             text-align: center;
@@ -116,11 +95,18 @@
         }
         .info-list {
             margin: 0px 0px;
-            padding: 0px 32px;
+            padding: 0px 0px;
         }
         .info-list li {
             margin: 10px 0px;
-            padding-left: 8px;
+            padding-left: 40px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .info-list i {
+            font-size: 16px;
+            left: -5px;
         }
         p {
             text-align: justify;
@@ -242,7 +228,7 @@
                 </div>
 
                 <div class="section">
-                    <h2 class="line-after contact-info">Contact me</h2>
+                    <h2 class="contact-info"><i class="fas fa-address-book"></i>Contact me</h2>
                     <ul class="section-content info-list fa-ul">
                         <li><i class="fa-li fas fa-location-dot"></i><h4>Riga, Latvia</h4></li>
                         <li><i class="fa-li fas fa-phone"></i><h4>+371 25328891</h4></li>
@@ -253,7 +239,7 @@
                 </div>
 
                 <div class="section">
-                    <h2 class="professional-summary">Profile</h2>
+                    <h2 class="professional-summary"><i class="fas fa-user-tie"></i>Profile</h2>
                     <div class="section-content">
                         <p>I am an experienced C++ developer with a strong focus on audio plugin development using the 
                             JUCE framework. My expertise includes designing and maintaining advanced sound processing 
@@ -292,7 +278,7 @@
                 </div>
 
                 <div class="section">
-                    <h2 class="education">Education</h2>
+                    <h2 class="education"><i class="fas fa-user-graduate"></i>Education</h2>
                     <div class="section-content">
                         <ul class="edu-list fa-ul">
                             <li class="edu-item"><i class="fa-li fas fa-circle"></i>
@@ -310,7 +296,7 @@
                 </div>
 
                 <div class="section">
-                    <h2 class="hobbies">Hobbies</h2>
+                    <h2 class="hobbies"><i class="fas fa-paper-plane"></i>Hobbies</h2>
                     <div class="section-content">
                         <div class="hobby-container">
                             <div class="hobby">
@@ -336,7 +322,7 @@
             
             <div class="column-wide">
                 <div class="section">
-                    <h2 class="skills">Expertise</h2>
+                    <h2 class="skills"><i class="fas fa-user-gear"></i>Expertise</h2>
                     <div class="section-content">
                         <div class="skill-container">
                             <div class="tech-skill">
@@ -380,7 +366,7 @@
                     </div>
                 </div>
                 <div class="section">
-                    <h2 class="professional-experience">Professional experience</h2>
+                    <h2 class="professional-experience"><i class="fas fa-laptop-code"></i>Professional experience</h2>
                     <div class="section-content">
                         <ul class="prof-list fa-ul">
                             <li class="prof-item"><i class="fa-li fas fa-circle"></i>
